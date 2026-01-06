@@ -9,6 +9,8 @@ import {
   Button,
   Link,
   Alert,
+  FormControlLabel,
+  Checkbox,
 } from '@mui/material';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 import { useAuth } from '@/contexts/AuthContext';
@@ -18,6 +20,7 @@ const LoginPage = () => {
   const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(true);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -27,7 +30,7 @@ const LoginPage = () => {
     setLoading(true);
 
     try {
-      await login(email, password);
+      await login(email, password, rememberMe);
       navigate('/dashboard');
     } catch (err: any) {
       setError(err.response?.data?.detail || 'Login failed. Please try again.');
@@ -91,6 +94,18 @@ const LoginPage = () => {
               required
               margin="normal"
               autoComplete="current-password"
+            />
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  color="primary"
+                />
+              }
+              label="Remember me"
+              sx={{ mt: 1, mb: 1 }}
             />
 
             <Button

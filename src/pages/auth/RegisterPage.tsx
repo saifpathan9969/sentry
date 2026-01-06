@@ -16,6 +16,8 @@ import { useAuth } from '@/contexts/AuthContext';
 const RegisterPage = () => {
   const navigate = useNavigate();
   const { register } = useAuth();
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -27,6 +29,16 @@ const RegisterPage = () => {
     setError('');
 
     // Validation
+    if (!firstName.trim()) {
+      setError('First name is required');
+      return;
+    }
+
+    if (!lastName.trim()) {
+      setError('Last name is required');
+      return;
+    }
+
     if (password !== confirmPassword) {
       setError('Passwords do not match');
       return;
@@ -37,10 +49,27 @@ const RegisterPage = () => {
       return;
     }
 
+    // Check password strength
+    if (!/[A-Z]/.test(password)) {
+      setError('Password must contain at least one uppercase letter');
+      return;
+    }
+
+    if (!/[a-z]/.test(password)) {
+      setError('Password must contain at least one lowercase letter');
+      return;
+    }
+
+    if (!/[0-9]/.test(password)) {
+      setError('Password must contain at least one digit');
+      return;
+    }
+
     setLoading(true);
 
     try {
-      await register(email, password);
+      const fullName = `${firstName.trim()} ${lastName.trim()}`;
+      await register(email, password, fullName);
       navigate('/dashboard');
     } catch (err: any) {
       setError(err.response?.data?.detail || 'Registration failed. Please try again.');
@@ -86,14 +115,32 @@ const RegisterPage = () => {
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <TextField
               fullWidth
-              label="Email"
+              label="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              required
+              margin="normal"
+              autoComplete="given-name"
+              autoFocus
+            />
+            <TextField
+              fullWidth
+              label="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              required
+              margin="normal"
+              autoComplete="family-name"
+            />
+            <TextField
+              fullWidth
+              label="Email Address"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
               margin="normal"
               autoComplete="email"
-              autoFocus
             />
             <TextField
               fullWidth
@@ -104,7 +151,7 @@ const RegisterPage = () => {
               required
               margin="normal"
               autoComplete="new-password"
-              helperText="Must be at least 8 characters"
+              helperText="Must be at least 8 characters with uppercase, lowercase, and digit"
             />
             <TextField
               fullWidth

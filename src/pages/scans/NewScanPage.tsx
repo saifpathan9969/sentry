@@ -23,21 +23,57 @@ import { useAuth } from '@/contexts/AuthContext';
 const scanModes = [
   {
     value: 'common',
-    label: 'Common',
+    label: 'Quick Scan',
     description: 'Fast scan for common vulnerabilities',
     duration: '~5 minutes',
   },
   {
     value: 'fast',
-    label: 'Fast',
-    description: 'Quick comprehensive scan',
+    label: 'Standard Scan',
+    description: 'Comprehensive scan with moderate depth',
     duration: '~15 minutes',
   },
   {
     value: 'full',
-    label: 'Full',
-    description: 'Deep comprehensive scan',
+    label: 'Deep Scan',
+    description: 'Thorough comprehensive security assessment',
     duration: '~30-60 minutes',
+  },
+  {
+    value: 'stealth',
+    label: 'Stealth Scan',
+    description: 'Low-profile scan to avoid detection',
+    duration: '~45-90 minutes',
+  },
+  {
+    value: 'aggressive',
+    label: 'Aggressive Scan',
+    description: 'High-intensity scan with all techniques',
+    duration: '~60-120 minutes',
+  },
+];
+
+const executionModes = [
+  {
+    value: 'report_only',
+    label: 'Report Only',
+    description: 'Generate vulnerability report without remediation',
+    icon: '📊',
+    tiers: ['free', 'premium', 'enterprise'],
+  },
+  {
+    value: 'dry_run',
+    label: 'Dry Run',
+    description: 'Simulate fixes without applying changes',
+    icon: '🧪',
+    tiers: ['premium', 'enterprise'],
+  },
+  {
+    value: 'apply_fixes',
+    label: 'Apply Fixes',
+    description: 'Automatically apply remediation fixes',
+    icon: '🔧',
+    tiers: ['enterprise'],
   },
 ];
 
@@ -46,10 +82,11 @@ const NewScanPage: React.FC = () => {
   const { user } = useAuth();
   const [targetUrl, setTargetUrl] = useState('');
   const [scanMode, setScanMode] = useState('common');
+  const [executionMode, setExecutionMode] = useState('report_only');
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent, withVisualization: boolean = false) => {
     e.preventDefault();
     
     if (!targetUrl) {
@@ -68,8 +105,19 @@ const NewScanPage: React.FC = () => {
     try {
       setSubmitting(true);
       setError('');
-      const scan = await apiClient.createScan(targetUrl, scanMode);
-      navigate(`/scans/${scan.id}`);
+      const scan = await apiClient.createScan(targetUrl, scanMode, executionMode);
+      
+      if (withVisualization) {
+        // Navigate directly to brain visualization
+        navigate(`/scans/${scan.id}/visualization`);
+      } else {
+        // Show success message and navigate to scan details
+        alert('Scan created successfully! Redirecting to scan details...');
+        setTimeout(() => {
+          navigate(`/scans/${scan.id}`);
+        }, 1000);
+      }
+      
     } catch (err: any) {
       setError(err.response?.data?.detail || 'Failed to create scan');
     } finally {
@@ -78,6 +126,19 @@ const NewScanPage: React.FC = () => {
   };
 
   const selectedMode = scanModes.find((m) => m.value === scanMode);
+  const selectedExecution = executionModes.find((m) => m.value === executionMode);
+  
+  // Filter scan modes and execution modes based on user tier
+  const userTier = user?.tier || 'free';
+  const availableScanModes = scanModes.filter(mode => {
+    if (userTier === 'free') return ['common', 'fast'].includes(mode.value);
+    if (userTier === 'premium') return ['common', 'fast', 'full', 'stealth'].includes(mode.value);
+    return true; // enterprise gets all modes
+  });
+  
+  const availableExecutionModes = executionModes.filter(mode => 
+    mode.tiers.includes(userTier)
+  );
 
   return (
     <Box>
@@ -115,13 +176,13 @@ const NewScanPage: React.FC = () => {
               />
 
               <FormControl fullWidth sx={{ mb: 3 }}>
-                <InputLabel>Scan Mode</InputLabel>
+                <InputLabel>Scan Type</InputLabel>
                 <Select
                   value={scanMode}
                   onChange={(e) => setScanMode(e.target.value)}
-                  label="Scan Mode"
+                  label="Scan Type"
                 >
-                  {scanModes.map((mode) => (
+                  {availableScanModes.map((mode) => (
                     <MenuItem key={mode.value} value={mode.value}>
                       {mode.label} - {mode.description}
                     </MenuItem>
@@ -129,11 +190,26 @@ const NewScanPage: React.FC = () => {
                 </Select>
               </FormControl>
 
+              <FormControl fullWidth sx={{ mb: 3 }}>
+                <InputLabel>Execution Mode</InputLabel>
+                <Select
+                  value={executionMode}
+                  onChange={(e) => setExecutionMode(e.target.value)}
+                  label="Execution Mode"
+                >
+                  {availableExecutionModes.map((mode) => (
+                    <MenuItem key={mode.value} value={mode.value}>
+                      {mode.icon} {mode.label} - {mode.description}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+
               {selectedMode && (
-                <Card variant="outlined" sx={{ mb: 3 }}>
+                <Card variant="outlined" sx={{ mb: 2 }}>
                   <CardContent>
                     <Typography variant="h6" gutterBottom>
-                      {selectedMode.label} Scan
+                      {selectedMode.label}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" paragraph>
                       {selectedMode.description}
@@ -145,16 +221,54 @@ const NewScanPage: React.FC = () => {
                 </Card>
               )}
 
-              <Button
-                type="submit"
-                variant="contained"
-                size="large"
-                fullWidth
-                startIcon={<PlayArrowIcon />}
-                disabled={submitting}
-              >
-                {submitting ? 'Creating Scan...' : 'Start Scan'}
-              </Button>
+              {selectedExecution && (
+                <Card variant="outlined" sx={{ mb: 3 }}>
+                  <CardContent>
+                    <Typography variant="h6" gutterBottom>
+                      {selectedExecution.icon} {selectedExecution.label}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {selectedExecution.description}
+                    </Typography>
+                    {selectedExecution.value === 'apply_fixes' && (
+                      <Alert severity="warning" sx={{ mt: 2 }}>
+                        <strong>Warning:</strong> This mode will automatically apply fixes to your target system. 
+                        Use with caution and ensure you have proper backups.
+                      </Alert>
+                    )}
+                  </CardContent>
+                </Card>
+              )}
+
+              <Box sx={{ display: 'flex', gap: 2 }}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  size="large"
+                  startIcon={<PlayArrowIcon />}
+                  disabled={submitting}
+                  onClick={(e) => handleSubmit(e, false)}
+                  sx={{ flex: 1 }}
+                >
+                  {submitting ? 'Creating Scan...' : 'Start Scan'}
+                </Button>
+                
+                <Button
+                  variant="contained"
+                  size="large"
+                  disabled={submitting}
+                  onClick={(e) => handleSubmit(e, true)}
+                  sx={{ 
+                    flex: 1,
+                    background: 'linear-gradient(45deg, #00ffff 30%, #0088ff 90%)',
+                    '&:hover': {
+                      background: 'linear-gradient(45deg, #00cccc 30%, #0066cc 90%)',
+                    }
+                  }}
+                >
+                  🧠 Neural Interface
+                </Button>
+              </Box>
             </form>
           </Paper>
         </Grid>

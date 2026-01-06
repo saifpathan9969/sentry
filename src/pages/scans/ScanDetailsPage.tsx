@@ -26,6 +26,7 @@ import {
   Download as DownloadIcon,
   Delete as DeleteIcon,
   Refresh as RefreshIcon,
+  Psychology as BrainIcon,
 } from '@mui/icons-material';
 import { apiClient } from '@/api/client';
 import type { Scan } from '@/types';
@@ -104,6 +105,10 @@ const ScanDetailsPage: React.FC = () => {
     }
   };
 
+  const handleBrainVisualization = () => {
+    navigate(`/scans/${id}/visualization`);
+  };
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed': return 'success';
@@ -152,6 +157,20 @@ const ScanDetailsPage: React.FC = () => {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Typography variant="h4">Scan Details</Typography>
         <Box>
+          <Button
+            startIcon={<BrainIcon />}
+            onClick={handleBrainVisualization}
+            variant="contained"
+            sx={{ 
+              mr: 1,
+              background: 'linear-gradient(45deg, #00ffff 30%, #0088ff 90%)',
+              '&:hover': {
+                background: 'linear-gradient(45deg, #00cccc 30%, #0066cc 90%)',
+              }
+            }}
+          >
+            Neural Interface
+          </Button>
           <IconButton onClick={loadScanDetails} title="Refresh">
             <RefreshIcon />
           </IconButton>

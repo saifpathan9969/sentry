@@ -27,6 +27,7 @@ import { useNavigate } from 'react-router-dom';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 import { apiClient } from '@/api/client';
 import { useAuth } from '@/contexts/AuthContext';
+import { BrainDemo } from '@/components/brain/BrainDemo';
 import type { Scan } from '@/types';
 
 const COLORS = ['#f44336', '#ff9800', '#ffeb3b', '#4caf50', '#2196f3'];
@@ -189,6 +190,13 @@ const DashboardPage: React.FC = () => {
       </Grid>
 
       <Grid container spacing={3}>
+        {/* AI Brain Demo */}
+        <Grid item xs={12} md={6}>
+          <BrainDemo 
+            onLaunchFullscreen={() => navigate('/scans/new')}
+          />
+        </Grid>
+
         {/* Quick Scan */}
         <Grid item xs={12} md={6}>
           <Paper sx={{ p: 3 }}>
