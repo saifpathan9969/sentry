@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\backend\app\models\api_usage.py
+# hypothesis_version: 6.148.8
+
+[255, 'CASCADE', 'User', 'api_usage', 'users.id']

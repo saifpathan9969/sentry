@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\backend\app\schemas\auth.py
+# hypothesis_version: 6.148.8
+
+[100, 255, '[0-9]', '[A-Z]', '[a-z]', 'bearer', 'new_password', 'password']

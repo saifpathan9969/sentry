@@ -1,0 +1,39 @@
+
+COMPREHENSIVE SESSION REPORT
+================================================================================
+
+SESSION INFORMATION:
+Target: https://csbc.sanjivaniuniversity.com
+Mode: REPORT_ONLY
+Start: 2025-11-05T00:33:30.893347
+End: 2025-11-05T00:35:20.722374
+Status: completed
+
+RECONNAISSANCE:
+Subdomains: 0
+IPs: 1
+Open Ports: 4
+Technologies: 1
+
+VULNERABILITIES FOUND: 8
+HIGH: 3
+MEDIUM: 3
+LOW: 1
+
+VULNERABILITY DETAILS:
+1. [MEDIUM] ftp_exposed at N/A
+2. [HIGH] mysql_exposed at N/A
+3. [MEDIUM] missing_x_frame_options at N/A
+4. [LOW] missing_x_content_type_options at N/A
+5. [MEDIUM] missing_hsts at N/A
+6. [INFO] http2_library_missing at N/A
+7. [HIGH] negative_value_accepted at https://csbc.sanjivaniuniversity.com
+8. [HIGH] Novel_Logic_Flaw_Type_Unknown at N/A
+
+ATTACK SIMULATION:
+Steps Executed: 3
+Success: True
+
+MODEL RETRAINED: True
+
+================================================================================

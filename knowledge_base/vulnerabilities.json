@@ -1,0 +1,3686 @@
+{
+  "missing_x_frame_options": [
+    {
+      "timestamp": "2025-10-17T22:53:56.861531",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-17T22:55:34.759192",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.281985",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544653",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999089",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449393",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708219",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:27.377174",
+      "target": "localhost:27017",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264211",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410394",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666159",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740212",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966589",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970458",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297120",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541669",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385811",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056673",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.563987",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060258",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474967",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745438",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503261",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034295",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295094",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:22:40.498883",
+      "target": "localhost:5000\\",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:23:08.752124",
+      "target": "localhost:5000\\",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265977",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198212",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737357",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103903",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:17.820612",
+      "target": "localhost:27017",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973166",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348519",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749118",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862629",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840715",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116799",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494394",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745229",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-04T00:00:35.416025",
+      "target": "http://example.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T00:35:20.714719",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T01:47:58.128390",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:24:43.291815",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:27:38.387791",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:43:04.870969",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:46:04.924565",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    }
+  ],
+  "missing_x_content_type_options": [
+    {
+      "timestamp": "2025-10-17T22:53:56.861535",
+      "target": "http://localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-17T22:55:34.759201",
+      "target": "http://localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.281993",
+      "target": "http://localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544659",
+      "target": "http://localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999096",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449399",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708222",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:27.377179",
+      "target": "localhost:27017",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264220",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410399",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666164",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740221",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966600",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970465",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297126",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541674",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385820",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056680",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.563997",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060268",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474974",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745445",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503268",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034304",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295103",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:22:40.498892",
+      "target": "localhost:5000\\",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:23:08.752132",
+      "target": "localhost:5000\\",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265984",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198223",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737362",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103915",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:17.820619",
+      "target": "localhost:27017",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973173",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348524",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749122",
+      "target": "localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862639",
+      "target": "http://localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840721",
+      "target": "http://localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116806",
+      "target": "http://localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494404",
+      "target": "http://localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745234",
+      "target": "http://localhost:5000",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-11-04T00:00:35.416030",
+      "target": "http://example.com",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-11-05T00:35:20.714721",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-11-05T01:47:58.128393",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-11-05T02:24:43.291817",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-11-05T02:27:38.387792",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-11-05T02:43:04.870970",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "low"
+    },
+    {
+      "timestamp": "2025-11-05T02:46:04.924568",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "low"
+    }
+  ],
+  "missing_hsts": [
+    {
+      "timestamp": "2025-10-17T22:53:56.861536",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-17T22:55:34.759205",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.281996",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544661",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999098",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449401",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708224",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:27.377181",
+      "target": "localhost:27017",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264222",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410401",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666166",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740224",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966603",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970468",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297129",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541676",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385824",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056682",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564001",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060271",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474976",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745447",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503271",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034308",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295106",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:22:40.498895",
+      "target": "localhost:5000\\",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:23:08.752135",
+      "target": "localhost:5000\\",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265986",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198225",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737364",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103918",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:17.820622",
+      "target": "localhost:27017",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973176",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348526",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749124",
+      "target": "localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862642",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840723",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116809",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494407",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745236",
+      "target": "http://localhost:5000",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T23:47:20.186813",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T23:51:54.527950",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T23:59:38.153584",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-04T00:00:35.416034",
+      "target": "http://example.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T00:35:20.714722",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T01:47:58.128395",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:24:43.291818",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:27:38.387795",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:43:04.870971",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:46:04.924570",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    }
+  ],
+  "exposed_sensitive_endpoint": [
+    {
+      "timestamp": "2025-10-17T22:55:34.759208",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:55:34.759213",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:55:34.759223",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:55:34.759226",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:55:34.759230",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:55:34.759232",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.281999",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282006",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282008",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282013",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282014",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282017",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544668",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544670",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544671",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544673",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544675",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544677",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999100",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999101",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999109",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999111",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999113",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999116",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449402",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449405",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449435",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449436",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449441",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449445",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708225",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708226",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708233",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708235",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708237",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708239",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264224",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264226",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264240",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264242",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264247",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264251",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410403",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410404",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410412",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410413",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410416",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410418",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666167",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666168",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666182",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666184",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666188",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666192",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740228",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740233",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740237",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740241",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740243",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740249",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966609",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966613",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966622",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966624",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966628",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966636",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970493",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970495",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970499",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970504",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970506",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970512",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297130",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297131",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297134",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297140",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297144",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297149",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541678",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541679",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541690",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541692",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541695",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541696",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385829",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385831",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385833",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385835",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385837",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385851",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056685",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056688",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056689",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056692",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056693",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056701",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564004",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564006",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564010",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564015",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564024",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564029",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060280",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060286",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060287",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060291",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060292",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060294",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474983",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474995",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474997",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.475004",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.475006",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.475008",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745453",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745457",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745458",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745465",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745466",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745467",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503280",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503287",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503290",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503301",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503303",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503305",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034317",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034323",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034328",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034335",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034342",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034344",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295109",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295118",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295120",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295122",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295124",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295139",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265988",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265997",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.266002",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.266003",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.266004",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.266005",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198227",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198243",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198252",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198254",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198256",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198263",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737366",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737377",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737385",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737387",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737389",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737390",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103922",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103937",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103948",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103950",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103952",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103954",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973178",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973192",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973201",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973203",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973205",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973207",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348527",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348535",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348540",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348541",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348543",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348546",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749126",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749139",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749146",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749148",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749150",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749152",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862650",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862652",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862659",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862666",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862668",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862673",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840727",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840728",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840732",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840736",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840738",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840740",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116814",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116816",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116827",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116829",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116831",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116838",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494410",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494412",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494421",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494435",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494436",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494444",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745239",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745241",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745248",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745250",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745251",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745258",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    }
+  ],
+  "command_injection": [
+    {
+      "timestamp": "2025-10-17T22:55:34.759211",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282009",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544666",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999105",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449411",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708230",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264234",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410408",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666174",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740226",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966606",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970497",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297141",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541683",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385847",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056684",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564031",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060284",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474991",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745454",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503283",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034321",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295130",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265994",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198238",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737373",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103932",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973188",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348533",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749134",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862647",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840725",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116832",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494438",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745252",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T23:47:20.186817",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T23:47:20.186822",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T23:51:54.527953",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T23:51:54.527957",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T23:59:38.153587",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T23:59:38.153593",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "critical"
+    }
+  ],
+  "ssrf": [
+    {
+      "timestamp": "2025-10-17T22:55:34.759216",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282010",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544664",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999112",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449439",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708236",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:27.377182",
+      "target": "localhost:27017",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:27.377183",
+      "target": "localhost:27017",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264244",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410415",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666186",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740232",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966615",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970488",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297138",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541686",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385853",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056699",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564018",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060277",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474981",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745450",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503276",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034333",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295114",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265998",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198246",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737379",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103940",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:17.820624",
+      "target": "localhost:27017",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:17.820626",
+      "target": "localhost:27017",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973194",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348536",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749141",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862655",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840729",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116818",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494413",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745242",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T23:47:20.186820",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T23:47:20.186824",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T23:51:54.527955",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T23:51:54.527959",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T23:59:38.153590",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T23:59:38.153595",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "high"
+    }
+  ],
+  "idor": [
+    {
+      "timestamp": "2025-10-17T22:55:34.759219",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282005",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544663",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999103",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999104",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449407",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449409",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708227",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708228",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264229",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264232",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410405",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410407",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666170",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666172",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740235",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740245",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966618",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966635",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970473",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970486",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297132",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297142",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541687",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541688",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385839",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385855",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056687",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056696",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564008",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564034",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060285",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060296",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474993",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.475012",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745456",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745464",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503285",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503299",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034310",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034339",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295112",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295126",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265990",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265992",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198230",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198235",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737368",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737371",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103925",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103930",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973181",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973185",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348529",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348531",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749128",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749132",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862662",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862678",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840734",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840742",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116812",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116822",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494409",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494417",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745238",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745245",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    }
+  ],
+  "cross_site_scripting": [
+    {
+      "timestamp": "2025-10-17T22:55:34.759221",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282016",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544672",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999108",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449432",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708232",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264239",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410411",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666179",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740239",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966620",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970508",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297136",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541681",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385845",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056702",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564020",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060295",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.475010",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745461",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503294",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034319",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295128",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265999",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198248",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737381",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103943",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973197",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348538",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749143",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862644",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840724",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116820",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494415",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745244",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    }
+  ],
+  "path_traversal": [
+    {
+      "timestamp": "2025-10-17T22:55:34.759228",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282003",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544674",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999107",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449430",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708231",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264236",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410409",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666177",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740230",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966611",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970471",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297148",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541691",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385843",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056698",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564013",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060275",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474979",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745449",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503273",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034313",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295132",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265996",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198241",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737375",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103935",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973190",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348534",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749137",
+      "target": "localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862671",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840739",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116837",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494443",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745257",
+      "target": "http://localhost:5000",
+      "severity": "high"
+    }
+  ],
+  "sql_injection": [
+    {
+      "timestamp": "2025-10-17T22:55:34.759235",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-17T22:58:01.282012",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T14:19:39.544667",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:14.999115",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:18.449443",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:21.708238",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:30.264250",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:33.410417",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T16:59:36.666190",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:02:55.740247",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:06:24.966626",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970491",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297147",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541682",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385849",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056703",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564036",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060282",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474988",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745451",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503278",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034315",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295137",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.265991",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198233",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737370",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103927",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973183",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348530",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749130",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862676",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840741",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116835",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494441",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745255",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    }
+  ],
+  "xxe": [
+    {
+      "timestamp": "2025-10-18T17:06:24.966633",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:08:13.970510",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297135",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541685",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385827",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056694",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564027",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060289",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.474999",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745463",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503296",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034337",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295135",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.266007",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198265",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737391",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103956",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973209",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348547",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749154",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862657",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840731",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116834",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494440",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745254",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    }
+  ],
+  "insecure_deserialization": [
+    {
+      "timestamp": "2025-10-18T17:08:13.970502",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:09:39.297139",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:11:22.541693",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:07.385841",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:13:55.056697",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:18:02.564022",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:18.060290",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:19:26.475002",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:14.745459",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:20:24.503292",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T17:31:56.034326",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:18:58.295116",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:05.266001",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:08.198250",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:11.737383",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:15.103945",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:20.973199",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:24.348539",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:25:27.749145",
+      "target": "localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:33:45.862664",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:34:02.840735",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:22.116825",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:56:39.494419",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    },
+    {
+      "timestamp": "2025-10-18T22:58:32.745247",
+      "target": "http://localhost:5000",
+      "severity": "critical"
+    }
+  ],
+  "ftp_exposed": [
+    {
+      "timestamp": "2025-10-18T23:47:20.186806",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T23:51:54.527944",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-10-18T23:59:38.153574",
+      "target": "https://demo.owasp-juice.shop",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T00:35:20.714713",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T01:47:58.128379",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:24:43.291810",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:27:38.387783",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:43:04.870963",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    },
+    {
+      "timestamp": "2025-11-05T02:46:04.924555",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "medium"
+    }
+  ],
+  "http2_library_missing": [
+    {
+      "timestamp": "2025-11-04T00:00:35.416037",
+      "target": "http://example.com",
+      "severity": "INFO"
+    },
+    {
+      "timestamp": "2025-11-05T00:32:28.805640",
+      "target": "http://",
+      "severity": "INFO"
+    },
+    {
+      "timestamp": "2025-11-05T00:35:20.714723",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "INFO"
+    }
+  ],
+  "Novel_Logic_Flaw_Type_Unknown": [
+    {
+      "timestamp": "2025-11-04T00:00:35.416039",
+      "target": "http://example.com",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-04T00:00:35.416041",
+      "target": "http://example.com",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-05T00:35:20.714727",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "HIGH"
+    }
+  ],
+  "mysql_exposed": [
+    {
+      "timestamp": "2025-11-05T00:35:20.714717",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-11-05T01:47:58.128387",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-11-05T02:24:43.291813",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-11-05T02:27:38.387788",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-11-05T02:43:04.870967",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-11-05T02:46:04.924562",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "high"
+    }
+  ],
+  "negative_value_accepted": [
+    {
+      "timestamp": "2025-11-05T00:35:20.714725",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-05T01:47:58.128397",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-05T02:24:43.291819",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-05T02:27:38.387797",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-05T02:43:04.870973",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-05T02:46:04.924574",
+      "target": "https://csbc.sanjivaniuniversity.com",
+      "severity": "HIGH"
+    }
+  ],
+  "cache_poisoning_unkeyed_header": [
+    {
+      "timestamp": "2025-11-15T19:59:11.491996",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-15T19:59:11.492003",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-15T19:59:11.492006",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-15T19:59:11.492009",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-15T19:59:11.492011",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-15T19:59:11.492013",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-15T19:59:11.492014",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-15T19:59:11.492016",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-15T19:59:11.492018",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-11-15T19:59:11.492019",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    }
+  ],
+  "cache_poisoning_host_header": [
+    {
+      "timestamp": "2025-11-15T19:59:11.492022",
+      "target": "http://localhost:8000",
+      "severity": "CRITICAL"
+    }
+  ],
+  "cache_key_injection": [
+    {
+      "timestamp": "2025-11-15T19:59:11.492024",
+      "target": "http://localhost:8000",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-12-29T14:34:28.093529",
+      "target": "http://udyogwave.com",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-12-29T14:44:48.877993",
+      "target": "http://udyogwave.com",
+      "severity": "HIGH"
+    },
+    {
+      "timestamp": "2025-12-29T14:50:31.211843",
+      "target": "http://udyogwave.com",
+      "severity": "HIGH"
+    }
+  ],
+  "Information Disclosure: Server Header": [
+    {
+      "timestamp": "2025-11-15T19:59:11.492027",
+      "target": "http://localhost:8000",
+      "severity": "LOW"
+    },
+    {
+      "timestamp": "2025-12-29T14:34:28.093533",
+      "target": "http://udyogwave.com",
+      "severity": "LOW"
+    },
+    {
+      "timestamp": "2025-12-29T14:44:48.877996",
+      "target": "http://udyogwave.com",
+      "severity": "LOW"
+    },
+    {
+      "timestamp": "2025-12-29T14:50:31.211846",
+      "target": "http://udyogwave.com",
+      "severity": "LOW"
+    },
+    {
+      "timestamp": "2026-01-04T22:29:10.013339",
+      "target": "http://missionexploit.vercel.app",
+      "severity": "LOW"
+    }
+  ],
+  "Missing Clickjacking Protections": [
+    {
+      "timestamp": "2025-11-15T19:59:11.492031",
+      "target": "http://localhost:8000",
+      "severity": "MEDIUM"
+    },
+    {
+      "timestamp": "2026-01-04T22:29:10.013341",
+      "target": "http://missionexploit.vercel.app",
+      "severity": "MEDIUM"
+    }
+  ],
+  "Missing X-Content-Type-Options": [
+    {
+      "timestamp": "2025-11-15T19:59:11.492033",
+      "target": "http://localhost:8000",
+      "severity": "MEDIUM"
+    },
+    {
+      "timestamp": "2026-01-04T22:29:10.013342",
+      "target": "http://missionexploit.vercel.app",
+      "severity": "MEDIUM"
+    }
+  ],
+  "Missing Content-Security-Policy": [
+    {
+      "timestamp": "2025-11-15T19:59:11.492036",
+      "target": "http://localhost:8000",
+      "severity": "MEDIUM"
+    },
+    {
+      "timestamp": "2026-01-04T22:29:10.013343",
+      "target": "http://missionexploit.vercel.app",
+      "severity": "MEDIUM"
+    }
+  ],
+  "brute_force_vulnerable": [
+    {
+      "timestamp": "2025-12-29T14:34:28.093523",
+      "target": "http://udyogwave.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-12-29T14:34:28.093527",
+      "target": "http://udyogwave.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-12-29T14:44:48.877985",
+      "target": "http://udyogwave.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-12-29T14:44:48.877990",
+      "target": "http://udyogwave.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-12-29T14:50:31.211835",
+      "target": "http://udyogwave.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2025-12-29T14:50:31.211840",
+      "target": "http://udyogwave.com",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2026-01-04T22:29:10.013332",
+      "target": "http://missionexploit.vercel.app",
+      "severity": "high"
+    },
+    {
+      "timestamp": "2026-01-04T22:29:10.013337",
+      "target": "http://missionexploit.vercel.app",
+      "severity": "high"
+    }
+  ],
+  "Service Banner Disclosure": [
+    {
+      "timestamp": "2025-12-29T14:34:28.093531",
+      "target": "http://udyogwave.com",
+      "severity": "LOW"
+    },
+    {
+      "timestamp": "2025-12-29T14:44:48.877995",
+      "target": "http://udyogwave.com",
+      "severity": "LOW"
+    },
+    {
+      "timestamp": "2025-12-29T14:50:31.211844",
+      "target": "http://udyogwave.com",
+      "severity": "LOW"
+    }
+  ],
+  "sso_csrf": [
+    {
+      "timestamp": "2026-01-04T22:29:10.013345",
+      "target": "http://missionexploit.vercel.app",
+      "severity": "HIGH"
+    }
+  ]
+}

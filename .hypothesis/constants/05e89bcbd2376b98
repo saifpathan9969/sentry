@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\cve_integration.py
+# hypothesis_version: 6.148.8
+
+[0.0, 0.6, 4.0, 7.0, 'HIGH', 'LOW', 'MEDIUM', 'N/A', 'No Results', 'Unknown', 'apiKey', 'baseScore', 'baseSeverity', 'command injection', 'command_injection', 'cross-site scripting', 'cross_site_scripting', 'csrf', 'cve', 'cveId', 'cve_data', 'cve_id', 'cvssData', 'cvssMetricV2', 'cvssMetricV30', 'cvssMetricV31', 'cvss_score', 'cvss_vector', 'cwe_ids', 'description', 'descriptions', 'deserialization', 'en', 'example_cve', 'exploit_available', 'id', 'idor', 'keywordSearch', 'lang', 'lastModified', 'metrics', 'modified', 'open redirect', 'open_redirect', 'path traversal', 'path_traversal', 'published', 'references', 'related_cves', 'resultsPerPage', 'severity', 'sql injection', 'sql_injection', 'ssrf', 'total_found', 'type', 'url', 'value', 'vectorString', 'vulnerabilities', 'weaknesses', 'xml external entity', 'xss', 'xxe']

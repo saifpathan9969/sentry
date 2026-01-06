@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\cli_parser.py
+# hypothesis_version: 6.148.8
+
+['\n✓ CLI parser ready', '-', '--config', '--cve-cache-ttl', '--enable-udp-scan', '--jira-token', '--jira-url', '--jwt-token', '--max-retries', '--max-threads', '--no-safe-mode', '--nvd-api-key', '--quiet', '--report-directory', '--report-format', '--request-timeout', '--save-config', '--scan-db-ports', '--scan-mode', '--scan-timeout', '--show-config', '--slack-webhook', '--user-agent', '--version', '20', '=', '?', 'Advanced Features', 'Authentication', 'CLI Parser Demo', 'CVE Integration', 'Configuration', 'DIR', 'FILE', 'Jira API token', 'Jira instance URL', 'KEY', 'N', 'Network Options', 'Report Options', 'SECONDS', 'SOAR Integration', 'STRING', 'Safety Options', 'Scanning Options', 'TOKEN', 'URL', '__main__', 'ai_pentest_brain', 'both', 'common', 'custom_', 'example.com', 'fast', 'full', 'json', 'store_true', 'target', 'text', 'version', 'w']

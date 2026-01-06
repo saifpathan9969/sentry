@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\client_side_scanner.py
+# hypothesis_version: 6.148.8
+
+['*', '-', '=', 'CRITICAL', 'Form name clobbering', 'HIGH', 'MEDIUM', 'User-Agent', '\\.postMessage\\s*\\(', '__main__', '__proto__', 'api_key', 'apikey', 'auth', 'constructor', 'cors_null_origin', 'cwe', 'description', 'dom_clobbering', 'endpoint', 'evidence', 'impact', 'new\\s+Worker\\s*\\(', 'null', 'password', 'prototype_pollution', 'recommendation', 'secret', 'severity', 'token', 'true', 'type', 'webstorage_xss', 'webworker_injection']

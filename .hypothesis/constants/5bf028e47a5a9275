@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\backend\app\api\v1\endpoints\users.py
+# hypothesis_version: 6.148.8
+
+['/me', '/me/api-key']

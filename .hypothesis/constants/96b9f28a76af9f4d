@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\backend\app\models\subscription.py
+# hypothesis_version: 6.148.8
+
+[255, 'CASCADE', 'User', 'active', 'canceled', 'enterprise', 'past_due', 'premium', 'subscription_status', 'subscription_tier', 'subscriptions', 'users.id']

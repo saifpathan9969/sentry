@@ -1,0 +1,49 @@
+
+AUTOMATED REMEDIATION REPORT
+============================
+
+Generated: 2025-11-05 02:27:38
+
+SUMMARY
+-------
+Total Findings: 6
+Remediated: 2
+Failed: 0
+Skipped: 4
+
+ACTIONS TAKEN
+-------------
+
+ftp_exposed
+Status: success
+Recommendation: Block port unknown or restrict access to trusted IPs only
+--------------------------------------------------
+
+mysql_exposed
+Status: success
+Recommendation: Block port unknown or restrict access to trusted IPs only
+--------------------------------------------------
+
+missing_x_frame_options
+Status: skipped
+Recommendation: Add X-Frame-Options header to prevent clickjacking
+[!] MANUAL ACTION REQUIRED
+--------------------------------------------------
+
+missing_x_content_type_options
+Status: skipped
+Recommendation: Add X-Content-Type-Options: nosniff header
+[!] MANUAL ACTION REQUIRED
+--------------------------------------------------
+
+missing_hsts
+Status: skipped
+Recommendation: Add Strict-Transport-Security header
+[!] MANUAL ACTION REQUIRED
+--------------------------------------------------
+
+negative_value_accepted
+Status: skipped
+Recommendation: Manual review required
+[!] MANUAL ACTION REQUIRED
+--------------------------------------------------
