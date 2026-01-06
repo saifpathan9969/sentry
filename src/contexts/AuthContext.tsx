@@ -95,6 +95,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const login = async (email: string, password: string, rememberMe: boolean = true) => {
     try {
       console.log('🔐 Attempting login for:', email);
+      
+      // Clear any existing state first
+      setUser(null);
+      clearTokens();
+      
       const response: AuthResponse = await apiClient.login(email, password);
       
       // Choose storage based on rememberMe preference
@@ -108,27 +113,21 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       otherStorage.removeItem('access_token');
       otherStorage.removeItem('refresh_token');
       
-      // CRITICAL: Always set user state immediately after successful login
+      // CRITICAL: Set user state immediately and synchronously
       if (response.user) {
         setUser(response.user);
         console.log('✅ Login successful - user state set:', response.user.email);
         console.log('✅ User tier:', response.user.tier);
         console.log('✅ User active:', response.user.is_active);
+        console.log('✅ Authentication state will be:', true);
       } else {
-        // If user not in response, fetch it immediately
-        console.log('🔄 User not in login response, fetching...');
-        const userData = await apiClient.getCurrentUser();
-        setUser(userData);
-        console.log('✅ User data fetched after login:', userData.email);
+        throw new Error('No user data in login response');
       }
-      
-      // Double-check authentication state
-      console.log('🔍 Final auth state check - isAuthenticated will be:', !!response.user);
       
     } catch (error) {
       console.error('❌ Login failed:', error);
       clearTokens();
-      setUser(null); // Ensure user state is cleared on failure
+      setUser(null);
       throw error;
     }
   };

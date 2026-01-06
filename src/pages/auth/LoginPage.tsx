@@ -32,12 +32,13 @@ const LoginPage = () => {
     try {
       console.log('🔐 LoginPage: Starting login process...');
       await login(email, password, rememberMe);
-      console.log('✅ LoginPage: Login completed, navigating to dashboard...');
+      console.log('✅ LoginPage: Login completed successfully');
       
-      // Add a small delay to ensure state is updated
-      setTimeout(() => {
-        navigate('/dashboard');
-      }, 100);
+      // Force a small delay to ensure state is fully updated
+      await new Promise(resolve => setTimeout(resolve, 200));
+      
+      console.log('🔄 LoginPage: Navigating to dashboard...');
+      navigate('/dashboard', { replace: true });
       
     } catch (err: any) {
       console.error('❌ LoginPage: Login error:', err);
