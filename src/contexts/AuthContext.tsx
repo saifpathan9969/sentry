@@ -108,23 +108,27 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       otherStorage.removeItem('access_token');
       otherStorage.removeItem('refresh_token');
       
+      // CRITICAL: Always set user state immediately after successful login
       if (response.user) {
         setUser(response.user);
-        console.log('✅ Login successful:', response.user.email);
+        console.log('✅ Login successful - user state set:', response.user.email);
+        console.log('✅ User tier:', response.user.tier);
+        console.log('✅ User active:', response.user.is_active);
       } else {
-        // If user not in response, fetch it
-        try {
-          const userData = await apiClient.getCurrentUser();
-          setUser(userData);
-          console.log('✅ User data fetched after login:', userData.email);
-        } catch (error) {
-          console.error('❌ Failed to fetch user after login:', error);
-          throw error;
-        }
+        // If user not in response, fetch it immediately
+        console.log('🔄 User not in login response, fetching...');
+        const userData = await apiClient.getCurrentUser();
+        setUser(userData);
+        console.log('✅ User data fetched after login:', userData.email);
       }
+      
+      // Double-check authentication state
+      console.log('🔍 Final auth state check - isAuthenticated will be:', !!response.user);
+      
     } catch (error) {
       console.error('❌ Login failed:', error);
       clearTokens();
+      setUser(null); // Ensure user state is cleared on failure
       throw error;
     }
   };

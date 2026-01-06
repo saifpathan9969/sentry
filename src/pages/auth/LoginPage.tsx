@@ -30,10 +30,19 @@ const LoginPage = () => {
     setLoading(true);
 
     try {
+      console.log('🔐 LoginPage: Starting login process...');
       await login(email, password, rememberMe);
-      navigate('/dashboard');
+      console.log('✅ LoginPage: Login completed, navigating to dashboard...');
+      
+      // Add a small delay to ensure state is updated
+      setTimeout(() => {
+        navigate('/dashboard');
+      }, 100);
+      
     } catch (err: any) {
-      setError(err.response?.data?.detail || 'Login failed. Please try again.');
+      console.error('❌ LoginPage: Login error:', err);
+      const errorMessage = err.response?.data?.detail || err.message || 'Login failed. Please try again.';
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
