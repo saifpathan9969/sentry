@@ -30,53 +30,69 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const isAuthenticated = !!user;
+  // Simple computed property
+  const isAuthenticated = user !== null;
 
-  // Load user on mount with better token management
+  // Clear all tokens from both storages
+  const clearTokens = () => {
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('refresh_token');
+    sessionStorage.removeItem('access_token');
+    sessionStorage.removeItem('refresh_token');
+  };
+
+  // Load user on mount
   useEffect(() => {
     const loadUser = async () => {
       try {
-        // Check both localStorage and sessionStorage for tokens
+        console.log('🔄 AuthProvider: Loading user on mount...');
+        
+        // Check for tokens
         const accessToken = localStorage.getItem('access_token') || sessionStorage.getItem('access_token');
         const refreshToken = localStorage.getItem('refresh_token') || sessionStorage.getItem('refresh_token');
         
-        if (accessToken) {
-          console.log('🔑 Found stored token, attempting to load user...');
-          try {
-            const userData = await apiClient.getCurrentUser();
-            setUser(userData);
-            console.log('✅ User loaded successfully:', userData.email);
-          } catch (error: any) {
-            console.log('🔄 Access token expired, trying refresh...');
-            
-            // Try to refresh token
-            if (refreshToken) {
-              try {
-                const response = await apiClient.refreshToken(refreshToken);
-                
-                // Store new tokens in the same storage as before
-                const storage = localStorage.getItem('access_token') ? localStorage : sessionStorage;
-                storage.setItem('access_token', response.access_token);
-                
-                // Try loading user again
-                const userData = await apiClient.getCurrentUser();
-                setUser(userData);
-                console.log('✅ Token refreshed and user loaded:', userData.email);
-              } catch (refreshError) {
-                console.log('❌ Token refresh failed, clearing storage');
-                clearTokens();
-              }
-            } else {
-              console.log('❌ No refresh token available, clearing storage');
+        if (!accessToken) {
+          console.log('ℹ️ AuthProvider: No access token found');
+          setIsLoading(false);
+          return;
+        }
+
+        console.log('🔑 AuthProvider: Found access token, loading user...');
+        
+        try {
+          const userData = await apiClient.getCurrentUser();
+          setUser(userData);
+          console.log('✅ AuthProvider: User loaded successfully:', userData.email);
+        } catch (error: any) {
+          console.log('🔄 AuthProvider: Access token expired, trying refresh...');
+          
+          if (refreshToken) {
+            try {
+              const response = await apiClient.refreshToken(refreshToken);
+              
+              // Store new token in same storage as refresh token
+              const storage = localStorage.getItem('refresh_token') ? localStorage : sessionStorage;
+              storage.setItem('access_token', response.access_token);
+              
+              // Try loading user again
+              const userData = await apiClient.getCurrentUser();
+              setUser(userData);
+              console.log('✅ AuthProvider: Token refreshed and user loaded:', userData.email);
+            } catch (refreshError) {
+              console.log('❌ AuthProvider: Token refresh failed, clearing tokens');
               clearTokens();
+              setUser(null);
             }
+          } else {
+            console.log('❌ AuthProvider: No refresh token, clearing tokens');
+            clearTokens();
+            setUser(null);
           }
-        } else {
-          console.log('ℹ️ No stored tokens found');
         }
       } catch (error) {
-        console.error('❌ Error loading user:', error);
+        console.error('❌ AuthProvider: Error during initialization:', error);
         clearTokens();
+        setUser(null);
       } finally {
         setIsLoading(false);
       }
@@ -85,47 +101,44 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     loadUser();
   }, []);
 
-  const clearTokens = () => {
-    localStorage.removeItem('access_token');
-    localStorage.removeItem('refresh_token');
-    sessionStorage.removeItem('access_token');
-    sessionStorage.removeItem('refresh_token');
-  };
-
   const login = async (email: string, password: string, rememberMe: boolean = true) => {
     try {
-      console.log('🔐 Attempting login for:', email);
+      console.log('🔐 AuthProvider: Starting login for:', email);
       
-      // Clear any existing state first
+      // Clear any existing state
       setUser(null);
       clearTokens();
       
+      // Perform login
       const response: AuthResponse = await apiClient.login(email, password);
       
-      // Choose storage based on rememberMe preference
-      const storage = rememberMe ? localStorage : sessionStorage;
+      if (!response.access_token || !response.user) {
+        throw new Error('Invalid login response - missing token or user data');
+      }
       
+      // Store tokens
+      const storage = rememberMe ? localStorage : sessionStorage;
       storage.setItem('access_token', response.access_token);
       storage.setItem('refresh_token', response.refresh_token);
       
-      // Clear the other storage to avoid conflicts
+      // Clear other storage
       const otherStorage = rememberMe ? sessionStorage : localStorage;
       otherStorage.removeItem('access_token');
       otherStorage.removeItem('refresh_token');
       
-      // CRITICAL: Set user state immediately and synchronously
-      if (response.user) {
-        setUser(response.user);
-        console.log('✅ Login successful - user state set:', response.user.email);
-        console.log('✅ User tier:', response.user.tier);
-        console.log('✅ User active:', response.user.is_active);
-        console.log('✅ Authentication state will be:', true);
-      } else {
-        throw new Error('No user data in login response');
-      }
+      // Set user state IMMEDIATELY and SYNCHRONOUSLY
+      setUser(response.user);
+      
+      console.log('✅ AuthProvider: Login successful');
+      console.log('✅ User:', response.user.email);
+      console.log('✅ Tier:', response.user.tier);
+      console.log('✅ isAuthenticated will be:', true);
+      
+      // Force a small delay to ensure React has processed the state update
+      await new Promise(resolve => setTimeout(resolve, 50));
       
     } catch (error) {
-      console.error('❌ Login failed:', error);
+      console.error('❌ AuthProvider: Login failed:', error);
       clearTokens();
       setUser(null);
       throw error;
@@ -134,35 +147,35 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const register = async (email: string, password: string, fullName?: string) => {
     try {
-      console.log('📝 Attempting registration for:', email);
+      console.log('📝 AuthProvider: Starting registration for:', email);
       const response: AuthResponse = await apiClient.register(email, password, fullName);
       
-      // Always remember registration (use localStorage)
+      // Store tokens (always remember registration)
       localStorage.setItem('access_token', response.access_token);
       localStorage.setItem('refresh_token', response.refresh_token);
       
       setUser(response.user);
-      console.log('✅ Registration successful:', response.user.email);
+      console.log('✅ AuthProvider: Registration successful:', response.user.email);
     } catch (error) {
-      console.error('❌ Registration failed:', error);
+      console.error('❌ AuthProvider: Registration failed:', error);
       throw error;
     }
   };
 
   const logout = () => {
-    console.log('🚪 Logging out user');
-    apiClient.logout();
-    setUser(null);
+    console.log('🚪 AuthProvider: Logging out');
     clearTokens();
+    setUser(null);
+    apiClient.logout();
   };
 
   const refreshUser = async () => {
     try {
       const userData = await apiClient.getCurrentUser();
       setUser(userData);
-      console.log('🔄 User data refreshed:', userData.email);
+      console.log('🔄 AuthProvider: User refreshed:', userData.email);
     } catch (error) {
-      console.error('❌ Failed to refresh user:', error);
+      console.error('❌ AuthProvider: Failed to refresh user:', error);
       logout();
     }
   };

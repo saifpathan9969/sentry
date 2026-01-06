@@ -1,4 +1,4 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { CircularProgress, Box } from '@mui/material';
 
@@ -8,35 +8,45 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const { isAuthenticated, isLoading, user } = useAuth();
+  const location = useLocation();
 
-  // Debug logging
   console.log('🛡️ ProtectedRoute check:', {
+    path: location.pathname,
     isLoading,
     isAuthenticated,
     hasUser: !!user,
-    userEmail: user?.email
+    userEmail: user?.email,
+    userTier: user?.tier
   });
 
+  // Show loading spinner while checking authentication
   if (isLoading) {
-    console.log('⏳ ProtectedRoute: Still loading auth state...');
+    console.log('⏳ ProtectedRoute: Still loading authentication state...');
     return (
       <Box
         display="flex"
         justifyContent="center"
         alignItems="center"
         minHeight="100vh"
+        sx={{ backgroundColor: '#000000' }}
       >
-        <CircularProgress />
+        <CircularProgress sx={{ color: '#b388ff' }} />
       </Box>
     );
   }
 
-  if (!isAuthenticated) {
+  // Redirect to login if not authenticated
+  if (!isAuthenticated || !user) {
     console.log('🚫 ProtectedRoute: Not authenticated, redirecting to login');
-    return <Navigate to="/login" replace />;
+    console.log('   Current path:', location.pathname);
+    console.log('   Will redirect to: /login');
+    return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  console.log('✅ ProtectedRoute: Authenticated, rendering protected content');
+  console.log('✅ ProtectedRoute: User authenticated, rendering protected content');
+  console.log('   User:', user.email);
+  console.log('   Tier:', user.tier);
+  
   return <>{children}</>;
 };
 

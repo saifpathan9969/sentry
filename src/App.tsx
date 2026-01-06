@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
-import { AuthProvider } from '@/contexts/AuthContext';
+import { AuthProvider, useAuth } from '@/contexts/AuthContext';
 
 // Pages
 import LoginPage from '@/pages/auth/LoginPage';
@@ -205,6 +205,17 @@ const theme = createTheme({
   },
 });
 
+// Root redirect component
+const RootRedirect = () => {
+  const { isAuthenticated, isLoading } = useAuth();
+  
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+  
+  return <Navigate to={isAuthenticated ? "/dashboard" : "/"} replace />;
+};
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -240,22 +251,68 @@ function App() {
 
             {/* Protected routes with layout */}
             <Route
+              path="/dashboard"
               element={
                 <ProtectedRoute>
-                  <AppLayout />
+                  <AppLayout>
+                    <DashboardPage />
+                  </AppLayout>
                 </ProtectedRoute>
               }
-            >
-              <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/scans" element={<ScansListPage />} />
-              <Route path="/scans/new" element={<NewScanPage />} />
-              <Route path="/scans/:id" element={<ScanDetailsPage />} />
-              <Route path="/settings" element={<SettingsPage />} />
-              <Route path="/billing" element={<BillingPage />} />
-            </Route>
+            />
+            <Route
+              path="/scans"
+              element={
+                <ProtectedRoute>
+                  <AppLayout>
+                    <ScansListPage />
+                  </AppLayout>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/scans/new"
+              element={
+                <ProtectedRoute>
+                  <AppLayout>
+                    <NewScanPage />
+                  </AppLayout>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/scans/:id"
+              element={
+                <ProtectedRoute>
+                  <AppLayout>
+                    <ScanDetailsPage />
+                  </AppLayout>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/settings"
+              element={
+                <ProtectedRoute>
+                  <AppLayout>
+                    <SettingsPage />
+                  </AppLayout>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/billing"
+              element={
+                <ProtectedRoute>
+                  <AppLayout>
+                    <BillingPage />
+                  </AppLayout>
+                </ProtectedRoute>
+              }
+            />
 
-            {/* Catch all */}
-            <Route path="*" element={<Navigate to="/" replace />} />
+            {/* Catch all - redirect based on auth status */}
+            <Route path="*" element={<RootRedirect />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
