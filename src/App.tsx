@@ -9,6 +9,8 @@ import DashboardPage from '@/pages/dashboard/DashboardPage';
 import ScansListPage from '@/pages/scans/ScansListPage';
 import NewScanPage from '@/pages/scans/NewScanPage';
 import ScanDetailsPage from '@/pages/scans/ScanDetailsPage';
+import { ScanVisualizationPage } from '@/pages/scans/ScanVisualizationPage';
+import { BrainTest } from '@/components/brain/BrainTest';
 import SettingsPage from '@/pages/settings/SettingsPage';
 import BillingPage from '@/pages/billing/BillingPage';
 import LandingPage from '@/pages/public/LandingPage';
@@ -215,6 +217,26 @@ function App() {
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+
+            {/* Brain visualization - full screen, no layout */}
+            <Route 
+              path="/scans/:scanId/visualization" 
+              element={
+                <ProtectedRoute>
+                  <ScanVisualizationPage />
+                </ProtectedRoute>
+              } 
+            />
+
+            {/* Brain test page - for development */}
+            <Route 
+              path="/brain-test" 
+              element={
+                <ProtectedRoute>
+                  <BrainTest />
+                </ProtectedRoute>
+              } 
+            />
 
             {/* Protected routes with layout */}
             <Route

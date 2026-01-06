@@ -1,6 +1,9 @@
 import axios, { AxiosError, AxiosInstance } from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
+  (import.meta.env.PROD 
+    ? 'https://sentry-backend-1.onrender.com/api/v1' 
+    : 'http://localhost:8000/api/v1');
 
 class APIClient {
   private client: AxiosInstance;
@@ -36,23 +39,37 @@ class APIClient {
           originalRequest._retry = true;
 
           try {
-            const refreshToken = localStorage.getItem('refresh_token');
+            // Check both storages for refresh token
+            const refreshToken = localStorage.getItem('refresh_token') || sessionStorage.getItem('refresh_token');
+            
             if (refreshToken) {
+              console.log('🔄 Attempting token refresh...');
               const response = await axios.post(`${API_BASE_URL}/auth/refresh`, {
                 refresh_token: refreshToken,
               });
 
               const { access_token } = response.data;
-              localStorage.setItem('access_token', access_token);
+              
+              // Store new token in the same storage as the refresh token
+              const storage = localStorage.getItem('refresh_token') ? localStorage : sessionStorage;
+              storage.setItem('access_token', access_token);
 
               originalRequest.headers.Authorization = `Bearer ${access_token}`;
+              console.log('✅ Token refreshed successfully');
               return this.client(originalRequest);
             }
           } catch (refreshError) {
+            console.log('❌ Token refresh failed, redirecting to login');
             // Refresh failed, logout user
             localStorage.removeItem('access_token');
             localStorage.removeItem('refresh_token');
-            window.location.href = '/login';
+            sessionStorage.removeItem('access_token');
+            sessionStorage.removeItem('refresh_token');
+            
+            // Only redirect if we're not already on login page
+            if (!window.location.pathname.includes('/login')) {
+              window.location.href = '/login';
+            }
             return Promise.reject(refreshError);
           }
         }
@@ -62,32 +79,77 @@ class APIClient {
     );
   }
 
-  // Auth endpoints
+  // Enhanced API client with better error handling and retries
   async login(email: string, password: string) {
-    const response = await this.client.post('/auth/login', { email, password });
-    return response.data;
+    try {
+      const response = await this.client.post('/auth/login', { email, password });
+      return response.data;
+    } catch (error: any) {
+      if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
+        throw new Error('Backend is starting up, please wait a moment and try again');
+      }
+      throw error;
+    }
   }
 
   async register(email: string, password: string, full_name?: string) {
-    const response = await this.client.post('/auth/register', { email, password, full_name });
+    try {
+      const response = await this.client.post('/auth/register', { email, password, full_name });
+      return response.data;
+    } catch (error: any) {
+      if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
+        throw new Error('Backend is starting up, please wait a moment and try again');
+      }
+      throw error;
+    }
+  }
+
+  async refreshToken(refreshToken: string) {
+    const response = await this.client.post('/auth/refresh', { refresh_token: refreshToken });
     return response.data;
   }
 
   async logout() {
     localStorage.removeItem('access_token');
     localStorage.removeItem('refresh_token');
+    sessionStorage.removeItem('access_token');
+    sessionStorage.removeItem('refresh_token');
   }
 
   async getCurrentUser() {
-    const response = await this.client.get('/users/me');
-    return response.data;
+    try {
+      const response = await this.client.get('/users/me');
+      return response.data;
+    } catch (error: any) {
+      if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
+        throw new Error('Backend is starting up, please wait a moment and try again');
+      }
+      throw error;
+    }
+  }
+
+  // Health check with retry logic
+  async healthCheck(retries = 3): Promise<boolean> {
+    for (let i = 0; i < retries; i++) {
+      try {
+        const response = await axios.get(`${API_BASE_URL.replace('/api/v1', '')}/health`, {
+          timeout: 10000
+        });
+        return response.status === 200;
+      } catch (error) {
+        if (i === retries - 1) return false;
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds
+      }
+    }
+    return false;
   }
 
   // Scan endpoints
-  async createScan(targetUrl: string, scanMode: string) {
+  async createScan(targetUrl: string, scanMode: string, executionMode: string = 'report_only') {
     const response = await this.client.post('/scans/', {
       target_url: targetUrl,
       scan_mode: scanMode,
+      execution_mode: executionMode,
     });
     const scan = response.data;
     // Transform backend response to match frontend expectations
