@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\backend\app\models\user.py
+# hypothesis_version: 6.148.8
+
+[255, 'APIUsage', 'Scan', 'Subscription', 'all, delete-orphan', 'enterprise', 'free', 'premium', 'user', 'user_tier', 'users']

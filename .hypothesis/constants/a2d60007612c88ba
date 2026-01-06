@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\websocket_scanner.py
+# hypothesis_version: 6.148.8
+
+[0.9, 10000000, '-', '/', '/api/socket', '/api/ws', '/chat', '/live', '/socket', '/stream', '/websocket', '/ws', '<script>', '=', 'A', 'CRITICAL', 'CWE-74: Injection', 'DROP TABLE', 'HIGH', 'INFO', 'MEDIUM', 'Origin', '__main__', 'action', 'admin', 'cmd', 'cwe', 'description', 'endpoint', 'error', 'evidence', 'file://', 'getAdminData', 'getPrivateData', 'getUsers', 'http://', 'http://attacker.com', 'http://evil.com', 'https://', 'impact', 'jndi', 'list_users', 'null', 'recommendation', 'severity', 'test', 'type', 'websocket_csrf', 'websocket_dos', 'websocket_injection', 'ws://', 'wss://', '{"userId": "admin"}']

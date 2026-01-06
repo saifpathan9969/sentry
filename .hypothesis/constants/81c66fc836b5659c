@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\text_report_generator.py
+# hypothesis_version: 6.148.8
+
+['-', '=', 'CRITICAL', 'DESCRIPTION:', 'END OF REPORT', 'EVIDENCE:', 'EXECUTIVE SUMMARY', 'HIGH', 'KEY FINDINGS', 'LOW', 'MEDIUM', 'N/A', 'NETWORK SCAN RESULTS', 'None', 'PLATFORM DETECTION', 'REFERENCES:', 'REMEDIATION:', 'SCAN INFORMATION', '_', 'critical', 'cve_data', 'cwe_ids', 'description', 'endpoint', 'evidence', 'example_cve', 'findings', 'high', 'indicators_found', 'info', 'low', 'medium', 'open_ports', 'platform_detection', 'reconnaissance', 'references', 'remediation', 'service', 'severity', 'type', 'unknown', 'utf-8', 'version', 'vulnerabilities', 'w']

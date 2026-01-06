@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\service_version_detector.py
+# hypothesis_version: 6.148.8
+
+[b'\x00\x00\x00\x08\x04\xd2\x16/', b'\x00\x00\x00\n', b'EHLO test\r\n', b'GET / HTTP/1.0\r\nHost: {host}\r\n\r\n', b'HEAD / HTTP/1.1\r\nHost: {host}\r\n\r\n', b'HELP\r\n', b'OPTIONS / HTTP/1.0\r\n\r\n', b'SSH-2.0-OpenSSH_Test\r\n', b'USER anonymous\r\n', b'{host}', 3.0, 4096, '(\\d+\\.\\d+)', '(\\d+\\.\\d+\\.\\d+)', 'Unknown', 'apache', 'ftp', 'http', 'https', 'ignore', 'iis', 'mongodb', 'mysql', 'nginx', 'openssh', 'postgresql', 'redis', 'smtp', 'ssh', 'utf-8']

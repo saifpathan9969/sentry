@@ -1,0 +1,42 @@
+# Core dependencies
+requests>=2.31.0
+numpy>=1.24.0
+
+# Production mode dependencies (SSH/SFTP deployment)
+paramiko>=3.3.1
+scp>=0.14.5
+
+# Database connectivity for production fixes
+pymysql>=1.1.0
+psycopg2-binary>=2.9.9
+pymongo>=4.6.0
+
+# Federated Learning (V2.0 - optional but recommended)
+flwr>=1.6.0  # Flower framework for federated learning
+torch  # PyTorch (CPU version) - REQUIRED
+# NOTE: syft (PySyft) is OPTIONAL - may have build issues on Python 3.13+
+# Install manually if needed: pip install syft
+# syft>=0.8.0  # PySyft for privacy-preserving ML (optional)
+
+# V3.5 - Modern Web Vulnerability Modules (Complete Web Coverage)
+PyJWT>=2.8.0  # JWT/OAuth testing
+websockets>=12.0  # WebSocket testing
+dnspython>=2.4.2  # Subdomain takeover detection
+httpx[http2]>=0.27.2  # HTTP/2 support
+h2>=4.1.0  # HTTP/2 protocol
+
+# Web testing and parsing
+beautifulsoup4>=4.12.3
+lxml>=5.3.0
+requests-oauthlib>=2.0.0
+python3-saml>=1.16.0
+
+# Domain utilities
+tldextract>=5.1.2
+
+# ML utilities for adaptive analysis
+scikit-learn>=1.5.0
+
+# Testing dependencies
+hypothesis>=6.90.0  # Property-based testing
+pytest>=7.4.0  # Unit testing framework

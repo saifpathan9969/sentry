@@ -1,0 +1,4 @@
+# file: C:\Users\saifu\OneDrive\Desktop\neural schema\backend\app\main.py
+# hypothesis_version: 6.148.8
+
+[8000, '*', '/', '/docs', '/health', '/redoc', '0.0.0.0', '__main__', 'app.main:app', 'docs', 'environment', 'healthy', 'info', 'message', 'status', 'version']

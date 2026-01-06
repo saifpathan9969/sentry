@@ -1,0 +1,58 @@
+{
+  "vulnerability_patterns": {
+    "sql_injection": [
+      {
+        "type": "sql_injection",
+        "payload_structure": {
+          "length": 15,
+          "special_char_ratio": 0.7333333333333333,
+          "has_quotes": true,
+          "has_sql_keywords": false,
+          "has_script_tags": false,
+          "has_command_chars": false,
+          "encoding_detected": false
+        },
+        "endpoint_pattern": "/api/users/{id}",
+        "response_indicators": [],
+        "severity": "CRITICAL",
+        "timestamp": "2025-10-24T19:29:57.410547"
+      }
+    ],
+    "xss": [
+      {
+        "type": "xss",
+        "payload_structure": {
+          "length": 25,
+          "special_char_ratio": 0.28,
+          "has_quotes": false,
+          "has_sql_keywords": false,
+          "has_script_tags": true,
+          "has_command_chars": false,
+          "encoding_detected": false
+        },
+        "endpoint_pattern": "/search",
+        "response_indicators": [],
+        "severity": "HIGH",
+        "timestamp": "2025-10-24T19:29:57.410588"
+      }
+    ]
+  },
+  "attack_signatures": {
+    "sql_injection": [
+      "aba6dabc249ad189"
+    ],
+    "xss": [
+      "a0b2352d01e65b3b"
+    ]
+  },
+  "fix_success_rates": {
+    "sql_injection_fix": 0.55,
+    "xss_fix": 0.55
+  },
+  "learning_stats": {
+    "total_scans": 14,
+    "patterns_learned": 4,
+    "model_updates": 0,
+    "last_training": "2026-01-04T22:29:10.020495"
+  }
+}
