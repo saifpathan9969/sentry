@@ -46,6 +46,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const loadUser = async () => {
       try {
         console.log('🔄 AuthProvider: Loading user on mount...');
+        console.log('🔧 Fixed: API client now checks both localStorage and sessionStorage for tokens');
         
         // Check for tokens
         const accessToken = localStorage.getItem('access_token') || sessionStorage.getItem('access_token');
