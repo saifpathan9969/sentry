@@ -66,12 +66,20 @@ const ScanDetailsPage: React.FC = () => {
   const loadScanDetails = async () => {
     try {
       setLoading(true);
-      const [scanData, reportData] = await Promise.all([
+      const [scanData, reportResponse] = await Promise.all([
         apiClient.getScan(id!),
         apiClient.getScanReport(id!, 'json').catch(() => null),
       ]);
       setScan(scanData);
-      setReport(reportData);
+      // Extract report content from response
+      if (reportResponse) {
+        const reportContent = reportResponse.report || reportResponse;
+        try {
+          setReport(typeof reportContent === 'string' ? JSON.parse(reportContent) : reportContent);
+        } catch {
+          setReport(reportContent);
+        }
+      }
     } catch (err) {
       console.error('Failed to load scan details:', err);
     } finally {
@@ -92,12 +100,16 @@ const ScanDetailsPage: React.FC = () => {
 
   const handleDownload = async (format: 'json' | 'text') => {
     try {
-      const data = await apiClient.getScanReport(id!, format);
-      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const response = await apiClient.getScanReport(id!, format);
+      // Extract the report content from the response
+      const reportContent = response.report || response;
+      const contentType = format === 'json' ? 'application/json' : 'text/plain';
+      const content = format === 'json' ? JSON.stringify(JSON.parse(reportContent), null, 2) : reportContent;
+      const blob = new Blob([content], { type: contentType });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `scan-${id}.${format}`;
+      a.download = `scan-${id}.${format === 'json' ? 'json' : 'txt'}`;
       a.click();
       URL.revokeObjectURL(url);
     } catch (err) {
@@ -174,9 +186,24 @@ const ScanDetailsPage: React.FC = () => {
           <IconButton onClick={loadScanDetails} title="Refresh">
             <RefreshIcon />
           </IconButton>
-          <IconButton onClick={() => handleDownload('json')} title="Download JSON">
-            <DownloadIcon />
-          </IconButton>
+          <Button
+            startIcon={<DownloadIcon />}
+            onClick={() => handleDownload('json')}
+            variant="outlined"
+            size="small"
+            sx={{ mr: 1 }}
+          >
+            JSON
+          </Button>
+          <Button
+            startIcon={<DownloadIcon />}
+            onClick={() => handleDownload('text')}
+            variant="outlined"
+            size="small"
+            sx={{ mr: 1 }}
+          >
+            Text
+          </Button>
           <IconButton onClick={handleDelete} color="error" title="Delete">
             <DeleteIcon />
           </IconButton>

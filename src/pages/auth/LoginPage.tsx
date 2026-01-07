@@ -9,8 +9,6 @@ import {
   Button,
   Link,
   Alert,
-  FormControlLabel,
-  Checkbox,
 } from '@mui/material';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 import { useAuth } from '@/contexts/AuthContext';
@@ -22,7 +20,6 @@ const LoginPage = () => {
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(true);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -46,9 +43,10 @@ const LoginPage = () => {
       console.log('🔐 LoginPage: Starting login process...');
       console.log('   Email:', email);
       console.log('   Intended destination:', from);
+      console.log('   Will stay logged in: YES (always)');
       
-      // Perform login
-      await login(email, password, rememberMe);
+      // Perform login - always remember user
+      await login(email, password, true);
       
       console.log('✅ LoginPage: Login completed successfully');
       
@@ -139,18 +137,6 @@ const LoginPage = () => {
               required
               margin="normal"
               autoComplete="current-password"
-            />
-
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  color="primary"
-                />
-              }
-              label="Remember me"
-              sx={{ mt: 1, mb: 1 }}
             />
 
             <Button
