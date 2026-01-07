@@ -19,6 +19,7 @@ import { ArrowBack as ArrowBackIcon, PlayArrow as PlayArrowIcon } from '@mui/ico
 import { useNavigate } from 'react-router-dom';
 import { apiClient } from '@/api/client';
 import { useAuth } from '@/contexts/AuthContext';
+import { ScanTerminal } from '@/components/scans/ScanTerminal';
 
 const scanModes = [
   {
@@ -85,6 +86,7 @@ const NewScanPage: React.FC = () => {
   const [executionMode, setExecutionMode] = useState('report_only');
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [activeScan, setActiveScan] = useState<{ id: string; status: string; target: string } | null>(null);
 
   const handleSubmit = async (e: React.FormEvent, withVisualization: boolean = false) => {
     e.preventDefault();
@@ -107,16 +109,39 @@ const NewScanPage: React.FC = () => {
       setError('');
       const scan = await apiClient.createScan(targetUrl, scanMode, executionMode);
       
-      if (withVisualization) {
-        // Navigate directly to brain visualization
-        navigate(`/scans/${scan.id}/visualization`);
-      } else {
-        // Show success message and navigate to scan details
-        alert('Scan created successfully! Redirecting to scan details...');
-        setTimeout(() => {
-          navigate(`/scans/${scan.id}`);
-        }, 1000);
-      }
+      // Show terminal with scan progress
+      setActiveScan({
+        id: scan.id,
+        status: 'running',
+        target: targetUrl
+      });
+      
+      // Poll for scan status
+      const pollInterval = setInterval(async () => {
+        try {
+          const updatedScan = await apiClient.getScan(scan.id);
+          setActiveScan(prev => prev ? { ...prev, status: updatedScan.status } : null);
+          
+          if (updatedScan.status === 'completed' || updatedScan.status === 'failed') {
+            clearInterval(pollInterval);
+            
+            if (withVisualization && updatedScan.status === 'completed') {
+              // Navigate to brain visualization after scan completes
+              setTimeout(() => {
+                navigate(`/scans/${scan.id}/visualization`);
+              }, 2000);
+            } else if (updatedScan.status === 'completed') {
+              // Navigate to scan details
+              setTimeout(() => {
+                navigate(`/scans/${scan.id}`);
+              }, 2000);
+            }
+          }
+        } catch (err) {
+          console.error('Failed to poll scan status:', err);
+          clearInterval(pollInterval);
+        }
+      }, 3000); // Poll every 3 seconds
       
     } catch (err: any) {
       setError(err.response?.data?.detail || 'Failed to create scan');
@@ -270,6 +295,20 @@ const NewScanPage: React.FC = () => {
                 </Button>
               </Box>
             </form>
+            
+            {/* Live Terminal Output */}
+            {activeScan && (
+              <Box sx={{ mt: 3 }}>
+                <Typography variant="h6" gutterBottom sx={{ color: '#00ff00' }}>
+                  🖥️ Live Scan Output
+                </Typography>
+                <ScanTerminal 
+                  scanId={activeScan.id}
+                  status={activeScan.status}
+                  target={activeScan.target}
+                />
+              </Box>
+            )}
           </Paper>
         </Grid>
 
