@@ -1,8 +1,8 @@
 # AI Penetration Testing Brain - Complete Guide 🧠
 
-**Version**: 4.2 (Neural Brain Production)  
-**Status**: LIVE & Production Ready  
-**Last Updated**: January 6, 2026
+**Version**: 4.3 (Live Terminal & Real Scanning)  
+**Status**: ✅ LIVE & FULLY OPERATIONAL  
+**Last Updated**: January 8, 2026
 
 ---
 
@@ -30,24 +30,30 @@
 
 ## Live Production URLs
 
-### 🌐 **PRODUCTION READY - LIVE NOW!**
+### 🌐 **PRODUCTION - LIVE & OPERATIONAL!**
 
-Your Sentry Security Platform is **LIVE** and ready for users!
+Your Sentry Security Platform is **LIVE** with all features working!
 
-- **🌐 Main Application**: https://sentry-ift7qnmep-saifs-projects-7eef2715.vercel.app
-- **🔧 Backend API**: https://sentry-backend-qugp.onrender.com
-- **📚 API Documentation**: https://sentry-backend-qugp.onrender.com/docs
-- **❤️ Health Check**: https://sentry-backend-qugp.onrender.com/health
+- **🌐 Main Application**: https://sentry-brown-xi.vercel.app
+- **🔧 Backend API**: https://sentry-backend-1.onrender.com
+- **📚 API Documentation**: https://sentry-backend-1.onrender.com/docs
+- **❤️ Health Check**: https://sentry-backend-1.onrender.com/health
 
-### 🔑 **Test Credentials**
+### ✨ **Latest Features (v4.3)**
+- ✅ **Live Terminal Output** - Real-time scan progress with Matrix-style terminal
+- ✅ **Real Scanning** - Actual AI pentest brain (no mock data)
+- ✅ **Text Reports** - Formatted reports matching your specifications
+- ✅ **Neural Brain Visualization** - 3D brain interface for scan results
+- ✅ **Persistent Authentication** - Stay logged in across sessions
 
-#### **Free Tier Account**
-- **Email**: `test@example.com`
-- **Password**: `Test1234`
-- **Features**: Basic scanning, neural visualization
+### 🔑 **Login Credentials**
 
-#### **Enterprise Account (Owner Account)**
+#### **Enterprise Account (Owner)**
 - **Email**: `saifullahpathan49@gmail.com`
+- **Email**: `saifullah.pathan24@sanjivani.edu.in`
+- **Password**: `Sentry@779969`
+- **Tier**: Enterprise (Full Access)
+- **Features**: All scanning modes, real-time terminal, neural brain, auto-remediation
 - **Password**: `Test1234`
 - **Features**: All scan types, all execution modes, unlimited access
 

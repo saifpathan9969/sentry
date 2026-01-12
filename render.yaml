@@ -1,0 +1,48 @@
+services:
+  - type: web
+    name: sentry-fullstack
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: |
+      # Install Node.js 18
+      curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+      sudo apt-get install -y nodejs
+      
+      # Install Python dependencies
+      pip install -r requirements.txt
+      
+      # Build frontend
+      cd frontend
+      npm install
+      
+      # Set API URL for unified deployment
+      echo "VITE_API_BASE_URL=/api/v1" > .env.production
+      
+      # Build React app
+      npm run build
+      cd ..
+      
+      # Copy frontend build to backend static directory
+      mkdir -p backend/static
+      cp -r frontend/dist/* backend/static/
+      
+      echo "✅ Full-stack build complete!"
+    startCommand: |
+      cd backend
+      python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./sentry.db
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ENVIRONMENT
+        value: production
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: OWNER_EMAILS
+        value: "saifullahpathan49@gmail.com,saifullah.pathan24@sanjivani.edu.in"
+    disk:
+      name: sentry-disk
+      mountPath: /opt/render/project/backend
+      sizeGB: 1
