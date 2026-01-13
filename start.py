@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 Fixed startup script for Render deployment
-Works with actual Render directory structure
 """
 import os
 import sys
@@ -12,113 +11,115 @@ def main():
     print("🚀 SENTRY SECURITY API STARTUP")
     print("=" * 50)
     
-    # Print current environment
     current_dir = os.getcwd()
     print(f"📁 Current directory: {current_dir}")
-    print(f"🐍 Python executable: {sys.executable}")
     
-    # List current directory contents
+    # List current directory contents to debug
     print("\n📂 Current directory contents:")
     try:
-        for item in sorted(os.listdir('.')):
+        items = sorted(os.listdir('.'))
+        for item in items:
             item_path = os.path.join('.', item)
             if os.path.isdir(item_path):
                 print(f"  📁 {item}/")
-                # If it's backend directory, show its contents too
-                if item == 'backend':
-                    try:
-                        backend_contents = os.listdir(item_path)
-                        for sub_item in sorted(backend_contents):
-                            sub_path = os.path.join(item_path, sub_item)
-                            if os.path.isdir(sub_path):
-                                print(f"    📁 {sub_item}/")
-                            else:
-                                print(f"    📄 {sub_item}")
-                    except:
-                        pass
             else:
                 print(f"  📄 {item}")
     except Exception as e:
         print(f"  ❌ Error listing directory: {e}")
     
-    # Strategy: Find where the backend/app structure is
-    possible_locations = [
-        # Case 1: We're in root, backend is subdirectory
-        ('backend', 'backend/app'),
-        # Case 2: We're already in backend
-        ('.', 'app'),
-        # Case 3: App is directly in current directory
-        ('.', '.'),
-    ]
+    # Based on logs, we know the structure should be:
+    # current_dir/backend/app/main.py
+    backend_dir = os.path.join(current_dir, 'backend')
+    app_dir = os.path.join(backend_dir, 'app')
+    main_py = os.path.join(app_dir, 'main.py')
     
-    working_dir = None
-    app_location = None
+    print(f"\n🔍 Expected paths:")
+    print(f"  Backend: {backend_dir}")
+    print(f"  App: {app_dir}")
+    print(f"  Main.py: {main_py}")
     
-    for work_dir, app_dir in possible_locations:
-        full_work_path = os.path.abspath(work_dir)
-        full_app_path = os.path.join(full_work_path, app_dir.replace('backend/', '').replace('backend', ''))
-        main_py_path = os.path.join(full_app_path, 'main.py')
-        
-        print(f"\n🔍 Checking location:")
-        print(f"  Work dir: {full_work_path}")
-        print(f"  App dir: {full_app_path}")
-        print(f"  Main.py: {main_py_path}")
-        
-        if os.path.exists(main_py_path):
-            working_dir = full_work_path
-            app_location = app_dir.replace('backend/', '').replace('backend', '') if app_dir != '.' else 'app'
-            print(f"  ✅ Found main.py!")
-            break
-        else:
-            print(f"  ❌ main.py not found")
+    print(f"\n✅ Path checks:")
+    print(f"  Backend exists: {os.path.exists(backend_dir)}")
+    print(f"  App exists: {os.path.exists(app_dir)}")
+    print(f"  Main.py exists: {os.path.exists(main_py)}")
     
-    if not working_dir:
-        print("\n❌ Could not find backend/app/main.py anywhere!")
-        print("📂 Please check your repository structure")
+    # If backend directory exists, show its contents
+    if os.path.exists(backend_dir):
+        print(f"\n📂 Backend directory contents:")
+        try:
+            for item in sorted(os.listdir(backend_dir)):
+                item_path = os.path.join(backend_dir, item)
+                if os.path.isdir(item_path):
+                    print(f"  📁 {item}/")
+                else:
+                    print(f"  📄 {item}")
+        except Exception as e:
+            print(f"  ❌ Error listing backend: {e}")
+    
+    # If app directory exists, show its contents
+    if os.path.exists(app_dir):
+        print(f"\n📂 App directory contents:")
+        try:
+            for item in sorted(os.listdir(app_dir)):
+                print(f"  📄 {item}")
+        except Exception as e:
+            print(f"  ❌ Error listing app: {e}")
+    
+    # Check if main.py exists
+    if not os.path.exists(main_py):
+        print(f"\n❌ main.py not found at: {main_py}")
+        print("🔍 This might be a file system sync issue on Render")
         return False
     
-    # Change to working directory
-    if working_dir != current_dir:
-        os.chdir(working_dir)
-        print(f"\n📁 Changed to working directory: {os.getcwd()}")
+    print(f"\n✅ Found main.py at: {main_py}")
     
-    # Add working directory to Python path
-    if working_dir not in sys.path:
-        sys.path.insert(0, working_dir)
-        print(f"🐍 Added to Python path: {working_dir}")
+    # Change to backend directory
+    os.chdir(backend_dir)
+    print(f"📁 Changed working directory to: {os.getcwd()}")
     
-    # Get port from environment
-    port = os.environ.get('PORT', '8000')
-    print(f"🌐 Using port: {port}")
+    # Add to Python path
+    if backend_dir not in sys.path:
+        sys.path.insert(0, backend_dir)
+        print(f"🐍 Added to Python path: {backend_dir}")
     
     # Test import
-    print(f"\n🧪 Testing import of {app_location}.main...")
+    print(f"\n🧪 Testing import of app.main...")
     try:
-        if app_location == 'app':
-            import app.main
-            module_name = 'app.main:app'
-        else:
-            # Direct import
-            import main
-            module_name = 'main:app'
+        import app.main
         print("✅ Import successful!")
+        
+        # Check if FastAPI app exists
+        if hasattr(app.main, 'app'):
+            print("✅ FastAPI app instance found")
+        else:
+            print("⚠️ FastAPI app instance not found, but import worked")
+            
     except ImportError as e:
         print(f"❌ Import failed: {e}")
         print("📍 Traceback:")
         traceback.print_exc()
+        
+        # Show Python path for debugging
+        print(f"\n🐍 Current Python path:")
+        for i, path in enumerate(sys.path):
+            print(f"  {i}: {path}")
+        
+        return False
+    except Exception as e:
+        print(f"❌ Unexpected import error: {e}")
+        traceback.print_exc()
         return False
     
-    # Start uvicorn
-    print(f"\n⚡ Starting uvicorn server...")
-    print(f"  Module: {module_name}")
-    print(f"  Host: 0.0.0.0")
-    print(f"  Port: {port}")
-    print(f"  Working dir: {os.getcwd()}")
+    # Get port
+    port = os.environ.get('PORT', '8000')
+    print(f"\n🌐 Starting server on port: {port}")
     
+    # Start uvicorn
+    print("🚀 Starting uvicorn server...")
     try:
         import uvicorn
         uvicorn.run(
-            module_name,
+            "app.main:app",
             host="0.0.0.0",
             port=int(port),
             log_level="info"
