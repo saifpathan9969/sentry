@@ -1,23 +1,24 @@
 services:
   - type: web
-    name: sentry-neural-pentesting-brain
+    name: ai-pentest-brain-neural-schema
     env: python
     region: oregon
     plan: free
-    buildCommand: pip install -r requirements-minimal.txt && echo "Backend-only build complete"
+    buildCommand: |
+      echo "🧠 Building AI Pentest Brain Web Service..."
+      pip install --upgrade pip
+      pip install -r requirements-minimal.txt
+      echo "✅ Dependencies installed"
+      echo "📁 Checking pentest brain files..."
+      ls -la *.py | grep -E "(ai_pentest|pentest_brain)" || echo "⚠️ Pentest brain files not found"
+      echo "🏗️ Build complete"
     startCommand: python start.py
     envVars:
-      - key: DATABASE_URL
-        value: sqlite:///./sentry.db
-      - key: SECRET_KEY
-        generateValue: true
       - key: ENVIRONMENT
         value: production
       - key: CORS_ORIGINS
         value: "*"
-      - key: OWNER_EMAILS
-        value: "saifullahpathan49@gmail.com,saifullah.pathan24@sanjivani.edu.in"
     disk:
-      name: sentry-disk
-      mountPath: /opt/render/project/backend
+      name: pentest-brain-disk
+      mountPath: /opt/render/project/data
       sizeGB: 1
