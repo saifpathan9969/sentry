@@ -1,4 +1,0 @@
-# file: C:\Users\saifu\OneDrive\Desktop\neural schema\graphql_scanner.py
-# hypothesis_version: 6.148.8
-
-[0.8, 200, 400, 500, ' }', "' OR '1'='1", '-', '/', '/api/graphql', '/api/query', '/gql', '/graphql', '/graphql/v1', '/query', '/v1/graphql', '=', 'CRITICAL', 'Content-Type', 'HIGH', 'MEDIUM', 'User-Agent', '__main__', '__schema', 'application/json', 'cwe', 'data', 'description', 'endpoint', 'error', 'errors', 'evidence', 'graphql_batch_attack', 'graphql_injection', 'impact', 'name', 'query', 'recommendation', 'severity', 'type', 'types', 'user { ', '{', '{ admin { data } }', '{__typename}', '{{7*7}}', '}']

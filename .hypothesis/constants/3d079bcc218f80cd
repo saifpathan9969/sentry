@@ -1,4 +1,0 @@
-# file: C:\Users\saifu\OneDrive\Desktop\neural schema\backend\app\models\scan.py
-# hypothesis_version: 6.148.8
-
-[100, 500, 'CASCADE', 'User', 'common', 'completed', 'failed', 'fast', 'full', 'queued', 'running', 'scan_mode', 'scan_status', 'scans', 'users.id']

@@ -1,4 +1,0 @@
-# file: C:\Users\saifu\OneDrive\Desktop\neural schema\comprehensive_port_scanner.py
-# hypothesis_version: 6.148.8
-
-[b'* OK', b'+OK', b'220', b'<!DOCTYPE', b'<html', b'DNS', b'ESMTP', b'FTP', b'GET / HTTP/1.0\r\n\r\n', b'HTTP/', b'IMAP', b'LDAP', b'MariaDB', b'MongoDB', b'OpenSSH', b'POP3', b'PostgreSQL', b'RDP', b'Redis', b'Remote Desktop', b'SMTP', b'SSH-', b'Server:', b'Telnet', b'mysql', 1.0, 2.0, 100, 110, 123, 143, 161, 162, 443, 445, 465, 500, 514, 520, 587, 988, 993, 995, 1000, 1024, 1433, 1521, 1900, 3306, 3389, 4500, 5432, 5900, 6379, 8080, 8443, 8888, 9200, 27017, 50000, 65536, '(\\d+\\.\\d+)', '(\\d+\\.\\d+\\.\\d+)', 'DB2', 'DNS', 'Elasticsearch', 'FTP', 'FTP-DATA', 'HTTP', 'HTTP-Alt', 'HTTP-Proxy', 'HTTPS', 'HTTPS-Alt', 'IMAP', 'IMAPS', 'LDAP', 'MSSQL', 'MongoDB', 'MySQL', 'Oracle', 'POP3', 'POP3S', 'PostgreSQL', 'RDP', 'Redis', 'SMB', 'SMTP', 'SMTPS', 'SSH', 'Telnet', 'Unknown', 'VNC', '[sS]erver[:\\s]+(\\S+)', 'ignore', 'open', 'tcp', 'udp', 'utf-8']

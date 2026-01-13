@@ -1,4 +1,0 @@
-# file: C:\Users\saifu\OneDrive\Desktop\neural schema\saml_sso_scanner.py
-# hypothesis_version: 6.148.8
-
-[200, 302, 400, 405, '-', '/', '/api/saml/acs', '/auth/saml', '/auth/sso', '/bin/bash', '/connect/authorize', '/login/sso', '/oauth2/authorize', '/saml/acs', '/saml/consume', '/saml/sso', '/saml2/acs', '/sso', '/sso/saml', '=', 'CRITICAL', 'HIGH', 'Role', 'SAMLResponse', 'User-Agent', '__main__', 'admin', 'attacker@evil.com', 'cwe', 'description', 'endpoint', 'evidence', 'impact', 'recommendation', 'redirect_uri', 'root:', 'saml', 'saml_xml_injection', 'saml_xxe', 'session_id', 'severity', 'sso_csrf', 'sso_session_fixation', 'state', 'type']

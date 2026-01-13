@@ -1,4 +1,0 @@
-# file: C:\Users\saifu\OneDrive\Desktop\neural schema\http2_scanner.py
-# hypothesis_version: 6.148.8
-
-[0.8, 100, 200, 100000, '-', '10', '2', '=', 'A', 'CRITICAL', 'Content-Length', 'HIGH', 'INFO', 'LOW', 'MEDIUM', 'Transfer-Encoding', 'User-Agent', 'X', 'X-Large-Header', '__main__', 'chunked', 'cwe', 'description', 'endpoint', 'evidence', 'http2_priority_abuse', 'http2_rapid_reset', 'http2_stream_abuse', 'http_version', 'impact', 'recommendation', 'severity', 'time', 'type']

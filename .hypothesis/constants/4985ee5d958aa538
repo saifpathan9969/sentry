@@ -1,4 +1,0 @@
-# file: C:\Users\saifu\OneDrive\Desktop\neural schema\cache_poisoning_scanner.py
-# hypothesis_version: 6.148.8
-
-[200, 400, '-', '/', '/account.css', '/admin.png', '/api/user.css', '/profile.js', '/user/info.jpg', '<script>', '=', '?callback=evil.com', 'CRITICAL', 'CWE-74: Injection', 'Forwarded', 'HIGH', 'Host', 'MEDIUM', 'True-Client-IP', 'User-Agent', 'X-Forwarded-Host', 'X-Forwarded-Proto', 'X-Forwarded-Scheme', 'X-Forwarded-Server', 'X-Host', 'X-Original-URL', 'X-Rewrite-URL', '__main__', 'cache_key_injection', 'cache_poisoning_dos', 'credit', 'cwe', 'description', 'email', 'endpoint', 'evidence', 'evil.com', 'impact', 'passwd', 'password', 'recommendation', 'session', 'severity', 'ssn', 'token', 'type', 'web_cache_deception']
