@@ -6,7 +6,7 @@ services:
     plan: free
     buildCommand: |
       # Install Python dependencies only
-      pip install -r requirements.txt
+      pip install -r requirements-minimal.txt
       
       # Create a simple HTML frontend in backend/static
       mkdir -p backend/static
@@ -35,7 +35,7 @@ services:
               .container { max-width: 800px; padding: 2rem; }
               h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 0 0 20px #00ff00; }
               .subtitle { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.8; }
-              .login-form { 
+              .login-form, .dashboard { 
                   background: rgba(0, 255, 0, 0.1);
                   border: 1px solid #00ff00;
                   border-radius: 10px;
@@ -45,7 +45,7 @@ services:
               }
               .form-group { margin-bottom: 1rem; text-align: left; }
               label { display: block; margin-bottom: 0.5rem; color: #00ff00; }
-              input { 
+              input, select { 
                   width: 100%;
                   padding: 0.8rem;
                   background: rgba(0, 0, 0, 0.7);
@@ -54,7 +54,7 @@ services:
                   color: #00ff00;
                   font-size: 1rem;
               }
-              input:focus { outline: none; box-shadow: 0 0 10px #00ff00; }
+              input:focus, select:focus { outline: none; box-shadow: 0 0 10px #00ff00; }
               .btn { 
                   background: linear-gradient(45deg, #00ff00, #00cc00);
                   color: #000;
@@ -92,10 +92,53 @@ services:
               }
               .blink { animation: blink 1s infinite; }
               @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+              .hidden { display: none; }
+              .scan-result { 
+                  background: rgba(0, 255, 0, 0.05);
+                  border: 1px solid #00ff00;
+                  border-radius: 5px;
+                  padding: 1rem;
+                  margin: 1rem 0;
+                  text-align: left;
+              }
+              .nav { 
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  background: rgba(0, 0, 0, 0.9);
+                  padding: 1rem;
+                  border-bottom: 1px solid #00ff00;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+              }
+              .nav-title { font-size: 1.5rem; font-weight: bold; }
+              .nav-user { font-size: 0.9rem; }
+              .logout-btn { 
+                  background: rgba(255, 0, 0, 0.2);
+                  color: #ff0000;
+                  border: 1px solid #ff0000;
+                  padding: 0.5rem 1rem;
+                  border-radius: 3px;
+                  cursor: pointer;
+                  margin-left: 1rem;
+              }
+              .dashboard-content { margin-top: 80px; }
           </style>
       </head>
       <body>
-          <div class="container">
+          <!-- Navigation (hidden by default) -->
+          <div class="nav hidden" id="nav">
+              <div class="nav-title">🛡️ SENTRY SECURITY</div>
+              <div class="nav-user">
+                  <span id="userEmail">Loading...</span>
+                  <button class="logout-btn" onclick="logout()">Logout</button>
+              </div>
+          </div>
+          
+          <!-- Login Page -->
+          <div class="container" id="loginPage">
               <h1>🛡️ SENTRY SECURITY</h1>
               <div class="subtitle">AI-Powered Penetration Testing Platform</div>
               
@@ -135,27 +178,78 @@ services:
                       <p>Comprehensive text and JSON reports with remediation</p>
                   </div>
               </div>
+          </div>
+          
+          <!-- Dashboard Page -->
+          <div class="container dashboard-content hidden" id="dashboardPage">
+              <h1>🎯 SECURITY DASHBOARD</h1>
+              <div class="subtitle">AI Penetration Testing Control Center</div>
               
-              <div class="terminal" id="terminal" style="display: none;">
-                  <div>🎯 Initializing AI Penetration Testing Brain...</div>
-                  <div>✅ Neural networks loaded successfully</div>
-                  <div>✅ Vulnerability database updated</div>
-                  <div>✅ Scanner engines ready</div>
-                  <div>🚀 System ready for security assessment</div>
-                  <div class="blink">▊</div>
+              <div class="dashboard">
+                  <h2>🚀 Start New Scan</h2>
+                  <form id="scanForm">
+                      <div class="form-group">
+                          <label for="target">Target URL:</label>
+                          <input type="url" id="target" placeholder="https://example.com" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="scanMode">Scan Mode:</label>
+                          <select id="scanMode">
+                              <option value="common">Common Vulnerabilities</option>
+                              <option value="fast">Fast Scan</option>
+                              <option value="full">Full Comprehensive</option>
+                              <option value="stealth">Stealth Mode</option>
+                              <option value="aggressive">Aggressive</option>
+                          </select>
+                      </div>
+                      <button type="submit" class="btn">🎯 START PENETRATION TEST</button>
+                  </form>
               </div>
+              
+              <div class="terminal hidden" id="scanTerminal">
+                  <div id="terminalOutput">🎯 Initializing AI Penetration Testing Brain...</div>
+              </div>
+              
+              <div id="scanResults"></div>
           </div>
           
           <script>
+              let currentUser = null;
+              let currentScan = null;
+              
+              // Check if user is already logged in
+              window.addEventListener('load', () => {
+                  const token = localStorage.getItem('token');
+                  if (token && window.location.pathname === '/dashboard') {
+                      showDashboard();
+                  } else if (token) {
+                      // Verify token is still valid
+                      fetch('/api/v1/auth/me', {
+                          headers: { 'Authorization': `Bearer ${token}` }
+                      }).then(response => {
+                          if (response.ok) {
+                              return response.json();
+                          }
+                          throw new Error('Token invalid');
+                      }).then(user => {
+                          currentUser = user;
+                          if (window.location.pathname === '/dashboard') {
+                              showDashboard();
+                          }
+                      }).catch(() => {
+                          localStorage.removeItem('token');
+                      });
+                  }
+              });
+              
+              // Login form handler
               document.getElementById('loginForm').addEventListener('submit', async (e) => {
                   e.preventDefault();
                   const email = document.getElementById('email').value;
                   const password = document.getElementById('password').value;
                   const status = document.getElementById('status');
-                  const terminal = document.getElementById('terminal');
                   
                   status.innerHTML = '🔄 Authenticating...';
-                  terminal.style.display = 'block';
                   
                   try {
                       const response = await fetch('/api/v1/auth/login', {
@@ -167,9 +261,10 @@ services:
                       if (response.ok) {
                           const data = await response.json();
                           localStorage.setItem('token', data.access_token);
+                          currentUser = data.user;
                           status.innerHTML = '✅ Login successful! Redirecting to dashboard...';
                           setTimeout(() => {
-                              window.location.href = '/dashboard';
+                              showDashboard();
                           }, 2000);
                       } else {
                           const error = await response.json();
@@ -180,10 +275,160 @@ services:
                   }
               });
               
-              // Auto-login for demo
-              setTimeout(() => {
-                  document.getElementById('terminal').style.display = 'block';
-              }, 1000);
+              // Scan form handler
+              document.getElementById('scanForm').addEventListener('submit', async (e) => {
+                  e.preventDefault();
+                  const target = document.getElementById('target').value;
+                  const scanMode = document.getElementById('scanMode').value;
+                  const token = localStorage.getItem('token');
+                  
+                  if (!token) {
+                      alert('Please login first');
+                      return;
+                  }
+                  
+                  // Show terminal
+                  const terminal = document.getElementById('scanTerminal');
+                  const output = document.getElementById('terminalOutput');
+                  terminal.classList.remove('hidden');
+                  
+                  output.innerHTML = `🎯 Starting penetration test on ${target}...<br>`;
+                  output.innerHTML += `📊 Scan Mode: ${scanMode}<br>`;
+                  output.innerHTML += `🔍 Initializing reconnaissance phase...<br>`;
+                  
+                  try {
+                      const response = await fetch('/api/v1/scans/', {
+                          method: 'POST',
+                          headers: { 
+                              'Content-Type': 'application/json',
+                              'Authorization': `Bearer ${token}`
+                          },
+                          body: JSON.stringify({ 
+                              target, 
+                              scan_mode: scanMode,
+                              execution_mode: 'report_only'
+                          })
+                      });
+                      
+                      if (response.ok) {
+                          const scan = await response.json();
+                          currentScan = scan;
+                          output.innerHTML += `✅ Scan created: ${scan.id}<br>`;
+                          output.innerHTML += `🚀 AI Brain analyzing target...<br>`;
+                          
+                          // Poll for scan results
+                          pollScanStatus(scan.id, token);
+                      } else {
+                          const error = await response.json();
+                          output.innerHTML += `❌ Scan failed: ${error.detail}<br>`;
+                      }
+                  } catch (err) {
+                      output.innerHTML += `❌ Connection error: ${err.message}<br>`;
+                  }
+              });
+              
+              async function pollScanStatus(scanId, token) {
+                  const output = document.getElementById('terminalOutput');
+                  const maxAttempts = 60; // 5 minutes
+                  let attempts = 0;
+                  
+                  const poll = async () => {
+                      try {
+                          const response = await fetch(`/api/v1/scans/${scanId}`, {
+                              headers: { 'Authorization': `Bearer ${token}` }
+                          });
+                          
+                          if (response.ok) {
+                              const scan = await response.json();
+                              
+                              if (scan.status === 'completed') {
+                                  output.innerHTML += `✅ Scan completed!<br>`;
+                                  output.innerHTML += `🎯 Found ${scan.vulnerabilities_found} vulnerabilities<br>`;
+                                  output.innerHTML += `📊 Critical: ${scan.critical_count}, High: ${scan.high_count}, Medium: ${scan.medium_count}, Low: ${scan.low_count}<br>`;
+                                  
+                                  // Show download buttons
+                                  const resultsDiv = document.getElementById('scanResults');
+                                  resultsDiv.innerHTML = `
+                                      <div class="scan-result">
+                                          <h3>📊 Scan Results</h3>
+                                          <p><strong>Target:</strong> ${scan.target}</p>
+                                          <p><strong>Status:</strong> ${scan.status}</p>
+                                          <p><strong>Vulnerabilities:</strong> ${scan.vulnerabilities_found}</p>
+                                          <p><strong>Platform:</strong> ${scan.platform_detected}</p>
+                                          <button class="btn" onclick="downloadReport('${scanId}', 'text')">📄 Download Text Report</button>
+                                          <button class="btn" onclick="downloadReport('${scanId}', 'json')">📋 Download JSON Report</button>
+                                      </div>
+                                  `;
+                                  return;
+                              } else if (scan.status === 'failed') {
+                                  output.innerHTML += `❌ Scan failed: ${scan.error_message}<br>`;
+                                  return;
+                              } else {
+                                  // Still running
+                                  output.innerHTML += `🔄 Scan in progress... (${scan.status})<br>`;
+                              }
+                          }
+                          
+                          attempts++;
+                          if (attempts < maxAttempts) {
+                              setTimeout(poll, 5000); // Poll every 5 seconds
+                          } else {
+                              output.innerHTML += `⏰ Scan timeout - check results manually<br>`;
+                          }
+                      } catch (err) {
+                          output.innerHTML += `❌ Error checking scan status: ${err.message}<br>`;
+                      }
+                  };
+                  
+                  setTimeout(poll, 2000); // Start polling after 2 seconds
+              }
+              
+              async function downloadReport(scanId, format) {
+                  const token = localStorage.getItem('token');
+                  try {
+                      const response = await fetch(`/api/v1/scans/${scanId}/report?format=${format}`, {
+                          headers: { 'Authorization': `Bearer ${token}` }
+                      });
+                      
+                      if (response.ok) {
+                          const blob = await response.blob();
+                          const url = window.URL.createObjectURL(blob);
+                          const a = document.createElement('a');
+                          a.href = url;
+                          a.download = `scan_report_${scanId}.${format === 'json' ? 'json' : 'txt'}`;
+                          document.body.appendChild(a);
+                          a.click();
+                          document.body.removeChild(a);
+                          window.URL.revokeObjectURL(url);
+                      } else {
+                          alert('Failed to download report');
+                      }
+                  } catch (err) {
+                      alert('Error downloading report: ' + err.message);
+                  }
+              }
+              
+              function showDashboard() {
+                  document.getElementById('loginPage').classList.add('hidden');
+                  document.getElementById('dashboardPage').classList.remove('hidden');
+                  document.getElementById('nav').classList.remove('hidden');
+                  
+                  if (currentUser) {
+                      document.getElementById('userEmail').textContent = currentUser.email || 'User';
+                  }
+                  
+                  // Update URL without reload
+                  window.history.pushState({}, '', '/dashboard');
+              }
+              
+              function logout() {
+                  localStorage.removeItem('token');
+                  currentUser = null;
+                  document.getElementById('loginPage').classList.remove('hidden');
+                  document.getElementById('dashboardPage').classList.add('hidden');
+                  document.getElementById('nav').classList.add('hidden');
+                  window.history.pushState({}, '', '/');
+              }
           </script>
       </body>
       </html>
